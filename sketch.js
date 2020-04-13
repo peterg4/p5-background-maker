@@ -10,7 +10,7 @@ let ma;
 function setup() {
   createCanvas(650, 650, WEBGL);
   ma = atan(1/sqrt(2));
-  frameRate(5);
+//  frameRate(5);
   maxD = distSquared(0,0,200,200);
 }
 function draw() {
@@ -22,7 +22,7 @@ function draw() {
   rectMode(CENTER)
   rotateX(-ma);
   rotateY(-QUARTER_PI);
-  background(255);
+  background(40);
   normalMaterial();
   for(let z = w; z < height-w; z+=w){
     for(let x = w; x < width-w; x+=w){
@@ -38,9 +38,9 @@ function draw() {
       pop()
     }
   }
-  if(frameCount > 120){
-    noLoop();
-  }
-  saveCanvas('myCanvas'+frameCount, 'png');
+ // if(frameCount > 120){
+  //  noLoop();
+  //}
+ // saveCanvas('myCanvas'+frameCount, 'png');
   angle += 0.065;
 }
